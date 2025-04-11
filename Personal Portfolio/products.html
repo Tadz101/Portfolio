@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #1E2A47; 
+            animation: fadeIn 1s ease-in;
+        }
+        header {
+            background-color: #2450b6; 
+            color: #D1D8E0;
+            padding: 10px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            background-color: #32487c; 
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+        }
+        nav a {
+            color: #D1D8E0;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: background-color 0.3s, font-size 0.3s;
+        }
+        nav a:hover {
+            background-color: #3221ce;
+            font-size: 18px;
+        }
+        section {
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        figure {
+            text-align: center;
+            border: 2px solid #211557;
+            padding: 10px;
+            background-color: #D1D8E0;
+            width: 200px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        figcaption {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #FF6F30;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #860000; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #d30000;
+            transform: scale(1.1);
+        }
+        footer {
+            background-color: #2450b6;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>Mark Tadena - BSIT 1 Y2 - 3</header>
+    <nav>
+        <a href="#featured-products">Featured Products</a>
+        <a href="#sales-gallery">Sales Gallery</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact-us">Contact Us</a>
+    </nav>
+    <main>
+        <section id="featured-products">
+            <h2>Featured Products</h2>
+            <div class="gallery-container">
+                <figure>
+                    <img src="https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-5-5600x.jpg" alt="Featured Product 1">
+                    <figcaption>Best Seller - AMD Ryzen™ 5 5600X</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/3021650-ryzen-9-9900x3d-product.jpg" alt="Featured Product 2">
+                    <figcaption>New Arrival - AMD Ryzen™ 9 9950X3D</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://dlcdnwebimgs.asus.com/files/media/9DDA3BB7-F3A9-486C-9911-0C7268B0F610/v1/img/pic_surface.png" alt="Featured Product 3">
+                    <figcaption>Limited Edition - ROG MAXIMUS Z690 HERO EVA EDITION</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="sales-gallery">
+            <h2>Sales Gallery</h2>
+            <div class="gallery-container">
+                <figure>
+                    <img src="https://media.karousell.com/media/photos/products/2022/6/10/_connect_with_the_summer_super_1654840678_71a8f648" alt="Sale Item 1">
+                    <figcaption>50% Off</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://ph-test-11.slatic.net/p/108a308d132901d80966bc99308290fc.jpg" alt="Sale Item 2">
+                    <figcaption>Buy 1 Get 1</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://mma.prnewswire.com/media/2275628/Thermaltake_Unveils_Unbeatable_Discounts_in_Collaboration_with_Amazon_banner_1.jpg" alt="Sale Item 3">
+                    <figcaption>Special Discount</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <figure>
+                    <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r990-m09od61hqr5w21" alt="Image 1">
+                    <figcaption>The Attack Shark X3 Pro is a high-performance gaming mouse.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://dlcdnwebimgs.asus.com/files/media/3F98C626-65EF-4A7A-9EB4-8EFA04C0B6B3/v1/img/video/rog-strix-scope-ii-96-wireless-maxed-out-gaming-versatility.jpg" alt="Image 2">
+                    <figcaption>The Asus ROG Strix Scope II 96 Wireless is a compact wireless keyboard.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.ytimg.com/vi/QvUc8WoeDTA/maxresdefault.jpg" alt="Image 3">
+                    <figcaption>The Shure MV6 is a portable USB microphone with high-quality audio and adjustable gain.</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Subject" required>
+                <textarea placeholder="Your Concern" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Product Gallery
+    </footer>
+</body>
+</html>

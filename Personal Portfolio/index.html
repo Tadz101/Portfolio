@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">Personal Portfolio</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="products.html" class="products-link">Products</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to My Creative Portfolio</h1>
+      <p>Explore my world of design, development, and ambition.</p>
+      <a href="#about" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="about-card">
+      <img src="c:\Users\Mark\Pictures\DSC_0044a.jpg" alt="Profile Picture" />
+      <h2>Tadena, Mark Angelo H.</h2>
+      <p>
+        Hi I'm Mark Tadena, and I’m currently pursuing a degree in Information Technology at Our Lady of Fatima University. Mark is passionate about coding and problem-solving. With experience in C, Java, and web development, he enjoys creating apps and working on personal projects in some of his free time. Outside of academics, Mark loves to play online games, especially Albion Online, where he plays and leads together with peers on top players.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Creative Portfolio. All rights reserved.</p>
+    <div class="social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-github"></i>
+    </div>
+  </footer>
+
+  <!-- Contact Logo and Menu -->
+  <div class="contact-logo">
+    <i class="fab fa-facebook-f"></i>
+  </div>
+
+  <!-- Contact Options Menu -->
+  <div id="contact-menu" class="contact-menu">
+    <ul>
+      <li><a href="https://www.facebook.com/mark.tadena.94" target="_blank">Facebook</a></li>
+      <li><a href="mailto:mhtadena8927qc@student.fatima.edu.ph">Email</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const contactLogo = document.querySelector('.contact-logo');
+    const contactMenu = document.getElementById('contact-menu');
+
+    contactLogo.addEventListener('click', function () {
+      // Toggle the visibility of the contact menu
+      contactMenu.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
